@@ -1,0 +1,52 @@
+<table class="responsive-table">
+    <caption>Movies List</caption>
+    <thead>
+        <tr>
+            <th scope="col">
+                Title<br />
+                <!-- <span> -->
+                <fa-icon [icon]="uu" (click)="sortMovies('title', true)"></fa-icon>
+                <fa-icon [icon]="dd" (click)="sortMovies('title', false)"></fa-icon>
+                <!-- </span> -->
+
+            </th>
+            <th scope="col">Description</th>
+            <th scope="col">
+
+                <!-- <button ">Sort Up</button> -->
+                <!-- <button (click)="sortMovies('release_date', false)">Sort Down</button> -->
+                Release Date<br />
+                <fa-icon [icon]="uu" (click)="sortMovies('release_date', true)"></fa-icon>
+                <fa-icon [icon]="dd" (click)="sortMovies('release_date', false)"></fa-icon>
+            </th>
+
+            <th scope="col">Number of Actors</th>
+            <th scope="col">
+                Remarks
+            </th>
+        </tr>
+    </thead>
+    <!-- <tfoot>
+        <tr>
+            <td colspan="7">Sources: <a href="http://en.wikipedia.org/wiki/List_of_highest-grossing_animated_films"
+                    rel="external">Wikipedia</a> &amp; <a
+                    href="http://www.boxofficemojo.com/genres/chart/?id=animation.htm" rel="external">Box Office
+                    Mojo</a>.</td>
+        </tr>
+    </tfoot> -->
+    <tbody>
+        <tr *ngFor="let movie of movies">
+            <th scope="row">{{ movie.title }}</th>
+            <td data-title="Description">{{ movie.description}}</td>
+            <td data-title="Realease-date">{{ movie.release_date }}</td>
+            <td data-title="Actors">{{ movie.num_actors }}</td>
+            <td data-title="Remarks">
+                <button (click)="upvote(movie)">Upvote : {{ movie.upvotes }}</button>
+                <button (click)="downvote(movie)">Downvote : {{ movie.downvotes }}</button>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>

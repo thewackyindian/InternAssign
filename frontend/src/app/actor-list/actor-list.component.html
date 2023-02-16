@@ -1,0 +1,28 @@
+
+<!-- <p> hello here </p> -->
+<table class="responsive-table">
+    <caption>Actors List</caption>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Number of Movies</th>
+        </tr>
+    </thead>
+    <!-- <tfoot>
+        <tr>
+            <td colspan="7">Sources: <a href="http://en.wikipedia.org/wiki/List_of_highest-grossing_animated_films"
+                    rel="external">Wikipedia</a> &amp; <a
+                    href="http://www.boxofficemojo.com/genres/chart/?id=animation.htm" rel="external">Box Office
+                    Mojo</a>.</td>
+        </tr>
+    </tfoot> -->
+    <tbody>
+        <tr *ngFor="let actor of actors">
+            <th scope="row">{{ actor.name }}</th>
+            <td data-title="Date-of-Birth">{{ actor.date_of_birth }}</td>
+            <td data-title="Movies">{{ actor.num_movies }}</td>
+        </tr>
+       
+    </tbody>
+</table>

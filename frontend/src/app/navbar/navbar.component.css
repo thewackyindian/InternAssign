@@ -1,0 +1,36 @@
+body {
+    height: 97vh;
+    width: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./istockphoto-1336937059-170667a.jpg');
+    background-size: cover;
+        /* Optional */
+    background-repeat: no-repeat;
+        /* Optional */
+}
+
+button {
+    margin: 20px;
+    padding: 40px 80px;
+    border: none;
+    cursor: pointer;
+}
+
+/* PIERWSZY SPOSOB WYKORZYSTANIE CIENIA */
+.first {
+    background: #18929d;
+    box-shadow: inset 0px 0px 0px 0px #ff0099;
+}
+
+
+/* DRUGI SPOSOB DLUZSZY ALE BARDZIEJ UNIWERSALNY*/
+.sec {
+    background: none;
+    background: #18929d;
+    position: relative;
+    overflow: hidden;
+}
+
+
